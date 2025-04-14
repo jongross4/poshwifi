@@ -44,7 +44,7 @@ function CloneEntry
 }
 
 # Windows Vista/2008/7
-if  ((gwmi win32_operatingsystem).Version.Split(".")[0] -gt 6) {
+if  (6 -gt (gwmi win32_operatingsystem).Version.Split(".")[0]) {
 	throw "This script works on Windows Vista or higher."
 }
 if ((gsv "wlansvc").Status -ne "Running" ) {
